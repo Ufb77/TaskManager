@@ -40,11 +40,12 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun PictureWithText() {
+fun PictureWithText(modifier: Modifier = Modifier) {
     val painter = painterResource(R.drawable.ic_task_completed)
     Column(
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier.fillMaxSize()
     ) {
         Image(painter = painter, contentDescription = null)
         Text(
